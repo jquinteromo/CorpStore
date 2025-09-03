@@ -1,0 +1,81 @@
+<div class="product-detail" *ngIf="product">
+    <a routerLink="/products" class="reply_toProducts"><span><mat-icon>keyboard_return</mat-icon></span> Volver a productos</a>
+    
+    
+<div class="container_product">
+
+    <div class="Image_product">
+       <img [src]="product.images[0]" alt="Imagen del producto">
+    </div>
+
+    <div class="info_product">
+        <h1 class="title_Product">{{ product.title }}</h1>
+
+        <div class="rating">
+        <igc-rating value="4" max="5" min="1"></igc-rating>
+        <span>({{product.rating}})</span>
+        </div>
+
+
+         <h3 class="price_Product"> ${{ product.price }}</h3>
+         <p class="Discount">Descuento por compras a por mayor</p>
+         <h2 class="description_Product_Title">Descripción del Producto</h2>         
+         <p class="description_Product">{{ product.description }}</p>
+         <button  (click)="addProduct(product)"  class="btn-add-cart">Agregar al carrito</button>
+         
+          <hr>
+         <div class="specifications">
+
+           <div class="specifications_security">
+              <span><mat-icon>security</mat-icon></span>
+              <div class="Info_security">
+               <h4>Garantia</h4>
+               <p>{{product.warrantyInformation}}</p>
+               </div>
+           </div>
+
+           <div class="specifications_security">
+              <span><mat-icon>local_shipping</mat-icon></span>
+              <div class="Info_security">
+               <h4>Entrega</h4>
+               <p>{{product.shippingInformation}}</p>
+               </div>
+           </div>
+
+           <div class="specifications_security">
+              <span><mat-icon>stars</mat-icon></span>
+              <div class="Info_security">
+               <h4>Certificado</h4>
+               <p>not available</p>
+           
+               </div>
+           </div>
+           
+
+    </div>
+
+</div>
+    
+
+
+</div>
+
+<div class="more_info">
+     <div class="technical_specifications">
+        <h2>Especificaciones Técnicas</h2>
+       <p>Categoría:<span>{{ product.category }}</span></p>
+        <p>Garantía:<span>{{ product.warrantyInformation }}</span></p>
+         <p>Peso:<span>{{ product.weight }}</span></p>
+      <p>Disponibilidad:<span>{{ product.availabilityStatus }}</span></p>
+    </div>
+
+
+    <div class="services_incluides">
+          <h2>Servicios Incluidos</h2>
+          <li>Instalación y configuración profesional</li>
+          <li>Capacitación del personal incluida</li>
+          <li>Soporte técnico especializado</li>
+          <li>Mantenimiento preventivo primer año</li>
+    </div>
+
+</div>

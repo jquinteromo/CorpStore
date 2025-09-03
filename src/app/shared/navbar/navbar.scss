@@ -1,0 +1,129 @@
+.example-spacer {
+    display: flex ;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    background-color: #fcfeff;
+    height: auto;
+    width: 100%;
+    padding-block: 1rem;
+    //  border-bottom: 1px solid #e0e0e0;
+    // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+}
+
+a {
+  text-decoration: none;
+  color: rgb(10, 37, 64) ;
+}
+
+a:hover {
+ border-bottom: rgb(10, 37, 64) 2px solid;
+}
+
+.active-link {
+  border-bottom: 2px solid rgb(10, 37, 64);
+}
+
+.Slogan {
+ display: flex;
+ align-items: center;
+ flex-direction: row;
+ gap: 0.5rem;
+ margin-left: 24px;
+}
+
+.Slogan-Icon{
+    display: flex;
+   
+    width: 12rem;
+    height: 5.5rem;
+//  background-color: #3c3a3a;
+    
+}
+
+.Slogan-Text{
+    color: #3c3a3a;
+}
+
+.Slogan-Text h2,
+.Slogan-Text p {
+  margin: 0;
+  padding: 0;
+}
+
+.Nav-links{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6rem;
+    font-size: 1rem;
+    color: #454242f5;
+    cursor: pointer;
+}
+
+.Add-Cart{
+    
+    margin-right: 4rem;
+    padding: 8px 14px;
+    
+    border-radius: 4px;
+     
+background: transparent;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.Add-Cart .mat-badge-content {
+  background-color: rgb(10, 37, 64); 
+  color: white;              
+  font-weight: bold;
+
+}
+
+.Icon-car{
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+ font-size: 18px;
+}
+
+.text-Corp{
+    color: rgb(6, 100, 42);;
+}
+
+@media (max-width: 768px) {
+  .example-spacer {
+    flex-direction: column;
+    align-items: stretch;
+    padding-block: 0.5rem;
+    height: auto;
+  }
+
+  .Slogan {
+    margin-left: 0;
+    justify-content: center;
+    gap: 0.3rem;
+  }
+
+  .Nav-links {
+    gap: 1.5rem;
+    font-size: 0.95rem;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .Add-Cart {
+    justify-content: center;
+    margin: auto;
+    margin-top: 2rem;
+    width: 16rem;
+  }
+}

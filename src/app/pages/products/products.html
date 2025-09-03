@@ -1,0 +1,40 @@
+<div class="home">
+
+    <div class="title-section-products">
+<h1>Catálogo Empresarial</h1>
+<p>Descubra nuestra selección de productos profesionales diseñados para impulsar la productividad empresarial.</p>
+
+    </div>
+
+
+    <div class="btns-categories" *ngFor="let btn of btnsCategories">
+           <button class="btn-categorie">{{btn.categorie}}</button>
+    </div>
+    
+<div class="content-cards">
+  <div class="card-product" *ngFor="let product of ExampleProducts ">
+
+    <div >
+<img [src]="product.images[0]" alt="Product Image">
+    </div>
+    
+
+    <p  class="available_product"><span>Disponible</span></p>
+
+    <h2 class="title-product">{{product.title}}</h2>
+    <!-- <h2>{{product.name}}</h2> -->
+    <p class="product_description">{{product.description}}</p>
+    <h1 class="price-product">${{product.price}}</h1>
+
+    <div class="btns-card">
+      <button  (click)="addProduct(product)" class="btn-add-cart"> Añadir al carrito</button>
+      <button (click)="goToDetail(product.id)" class="btn-details">Ver detalles</button>
+    </div>
+  </div>
+</div>
+
+<div>
+  
+
+</div>
+</div>

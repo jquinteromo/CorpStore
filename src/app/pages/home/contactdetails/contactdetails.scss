@@ -1,0 +1,50 @@
+.contact-details {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    width: 100%;
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    box-sizing: border-box; 
+    overflow-x: hidden;     
+}
+
+.contact-details h2{
+    color:  #3c3a3a;
+}
+
+.contact-details p{
+    color:  #3c3a3a;
+    font-weight: 200;
+}
+
+.product-description,
+.services-description,
+.contacts {
+    // background-color: black;
+    flex: 1;        
+    min-width: 0;   
+}
+
+.contacts p{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.contacts mat-icon{
+    color:  rgb(10, 37, 64); 
+}
+
+
+//Responsive adjustments
+
+// @media (max-width: 900px) {
+//   .contact-details {
+//     flex-direction: column;
+//     gap: 1rem;
+//     padding-left: 1rem;
+//     padding-right: 1rem;
+//   }
+// }

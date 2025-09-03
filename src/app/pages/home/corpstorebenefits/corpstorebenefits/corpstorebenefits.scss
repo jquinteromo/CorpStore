@@ -1,0 +1,101 @@
+.Corpstore-benefits{
+    // background-color: blueviolet;
+    
+    width: 100%;
+    padding-top: 8rem;
+}
+
+
+.Corpstore-benefits-description{
+display: flex;
+flex-direction: column;
+align-items: center;
+font-size: 1.2rem;
+   color: #3c3a3a;
+}
+
+.Corpstore-benefits-cards{
+    width: 100%;
+   display: flex;
+       flex-direction: row;
+    margin-top: 1rem;
+justify-content: center;
+    align-items: center;
+    // background-color: aqua;
+    
+}
+
+.benefit-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // background-color: brown;
+    margin: 2rem;
+  color: #3c3a3a;
+  border: solid 1px #cfc7c7;
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+.benefit-icon{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    // background-color: blue;
+    height: 3rem;
+    width: 3rem;
+      color:  rgb(10, 37, 64); 
+}
+
+.benefit-card h3{
+ margin: 0;
+ padding: 0;
+ font-size: 1.5rem;
+
+}
+
+.benefit-card p{
+ margin: 0;
+ padding: 0;
+ font-size: 1rem;
+ margin-top: 24px;
+ text-align: center;
+
+}
+
+
+
+//Responsive Design
+// ...existing code...
+
+@media (max-width: 900px) {
+  .Corpstore-benefits-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .benefit-card {
+    width: 90%;
+    margin: 1rem 0;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .Corpstore-benefits {
+    padding-top: 4rem;
+  }
+  .benefit-card {
+    width: 100%;
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+  .benefit-card h3 {
+    font-size: 1.1rem;
+  }
+  .benefit-icon {
+    font-size: 2rem;
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+}

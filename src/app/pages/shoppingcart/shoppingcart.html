@@ -1,0 +1,84 @@
+<p>shoppingcart works!</p>
+
+<div class="container_shoppingcar">
+   <h1 class="title_shoppingcar">
+         Carrito de Compras
+   </h1>
+
+   <p class="warining_Tobuy">Revise sus productos seleccionados antes de proceder con la compra empresarial.</p>
+
+   <div class="container_targets">
+
+<div class="container_products_target">
+         <div class="Product_add " *ngFor="let product of ProductsInCart">
+                <img  class="img_product" [src]="product.images[0]" alt="monitor">
+                 <div class="details_product">
+
+                    <div class="title_delete">
+                            <h3 class="name_product">{{product.title}}</h3>
+                            <button (click)="delecproduct(product.id)" class="btn_remove_product"><mat-icon>remove_shopping_cart</mat-icon></button>
+                    </div>
+                     
+
+
+                     <p class="description_product">{{product.description}}<br>
+                     </p>
+
+                     <div class="container_actions_precies">
+                     <div class="btns_actions">
+                         <button (click)="sumeamount(product)" class="btn_add"><mat-icon>add</mat-icon></button>
+                         <span class="quanty_products">{{product.quantity ?? 1}}</span>
+                         <button (click)="decraseamount(product)" class="btn_decrase"><mat-icon>remove</mat-icon></button>
+                     </div>
+
+                     <div class="precies_product">
+                             <h3 class="total_precie_product">${{Totalprecieproduct(product)}}</h3>
+                             <h4 class="precie_product">${{roundedPrice(product)}}</h4>
+                     </div>
+                     </div>
+
+                 </div>
+         </div>
+</div>
+
+
+         <div class="container_resume_order">
+            <h4>Resumen del pedido</h4>
+                  <div class="container_list">
+                    <p class="subtotal_text">Subtotal:</p>
+                    <p class="subtotal_precie">${{Subtotal()}}</p>
+                  </div>
+
+                <div class="container_list">
+                    <p class="iva_text">IVA (21%):</p>
+                    <p class="iva_precie">$138.60</p>
+                </div>
+
+                     <div class="container_list">
+                    <p class="shiptment_text">Envío empresarial:</p>
+                    <p class="type_shiptment">Gratis</p>
+                  </div>
+
+                <div class="container_list_total">
+                    <h3 class="total_text">Total:</h3>
+                    <h3 class="total_precie">${{Total()}}</h3>
+                </div>
+                
+                <div class="btns_actions_pay_request">
+                   <button class="btn_pay">Proceder al pago</button>
+                   <button class="btn_request_price">Solicitar Cotización</button>
+                </div>
+                
+
+                <div class="benefices_business">
+                    <h3 class="title_benefices">Beneficios Empresariales</h3>
+                        <li class="item_benefices">Facturación empresarial</li>      
+                            <li class="item_benefices">Instalación incluida</li>
+                                <li class="item_benefices">Soporte técnico 24/7</li>
+                                    <li class="item_benefices">Garantias extendidas</li>
+                                    
+                </div>
+         </div>
+   </div>
+
+</div>
