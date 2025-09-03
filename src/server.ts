@@ -11,7 +11,7 @@ import { join } from 'node:path';
 
 export const serverConfig = {
   routes: [
-    { path: 'product/:id', renderMode: 'server' }  ]
+    {path: 'product/:id', renderMode: 'server' }  ]
 };
 
 const browserDistFolder = join(import.meta.dirname, '../browser');
