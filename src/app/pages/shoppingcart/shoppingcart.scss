@@ -217,3 +217,49 @@ font-weight: 500;
     color: rgb(10, 37, 64);
   margin-right: 8px; 
 }
+
+.hidden {
+  display: none !important;
+}
+
+
+.visible {
+  display: block;
+}
+
+.shippingempty{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;    
+//    background-color: #3c3a3a;
+    
+    color: #3c3a3a;
+    width: 100% ;
+}
+
+.img_empty{
+    width: 20rem;
+    height: 20rem;
+    object-fit: contain;
+    margin-left: 4rem;
+}
+
+
+.img_empty p {
+    font-size: 12px;
+}
+.title_empty{
+    font-size: 2rem;
+    color: rgb(10, 37, 64);
+}
+
+.btn_explore_products{
+    background-color: rgb(10, 37, 64);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 1rem;
+}

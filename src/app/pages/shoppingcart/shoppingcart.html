@@ -1,11 +1,11 @@
 <p>shoppingcart works!</p>
 
 <div class="container_shoppingcar">
-   <h1 class="title_shoppingcar">
+   <h1  [ngClass]="{hidden : ProductsInCart.length===0}" class="title_shoppingcar">
          Carrito de Compras
    </h1>
 
-   <p class="warining_Tobuy">Revise sus productos seleccionados antes de proceder con la compra empresarial.</p>
+   <p  [ngClass]="{hidden : ProductsInCart.length===0}"class="warining_Tobuy">Revise sus productos seleccionados antes de proceder con la compra empresarial.</p>
 
    <div class="container_targets">
 
@@ -42,7 +42,7 @@
 </div>
 
 
-         <div class="container_resume_order">
+         <div [ngClass]="{hidden : ProductsInCart.length===0}" class="container_resume_order">
             <h4>Resumen del pedido</h4>
                   <div class="container_list">
                     <p class="subtotal_text">Subtotal:</p>
@@ -79,6 +79,13 @@
                                     
                 </div>
          </div>
+<div [ngClass]="{ 'hidden': ProductsInCart.length >= 1 }" class="shippingempty">
+    <div class="InfoEmpty">
+        <h2 class="title_empty">Tu carrito está vacío</h2>
+        <p class="description_empty">Explore Nuestro catálogo de productos empresariales y agregue<br> artículos a su carrito.</p>
+        <button  (click)="goToProducts()"  class="btn_explore_products">Explorar Productos</button>
+         </div>
+<img class="img_empty" src="/Image-home/Icono_pestaña.png" alt="empty cart">
    </div>
 
 </div>

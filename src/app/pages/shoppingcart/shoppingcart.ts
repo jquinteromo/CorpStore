@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component ,inject} from '@angular/core';
 
 import {ShoppingcartService} from '../../core/shoppingcart.service';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { CartService } from '../../core/cart.service';
-
+import { Router } from '@angular/router';
 
 interface Product { 
   id:number
@@ -34,12 +34,13 @@ interface Product {
 
 export class Shoppingcart {
 
-
+ private router = inject(Router);
 
 amountToPay: number = 1;
 
 Products: Product[] = [];
 
+state : boolean = true;
 
 constructor(private shoppingcart:ShoppingcartService, private cartservice : CartService) { }
 
@@ -88,6 +89,9 @@ trackByProduct(index: number, product: Product): number {
   return product.id;
 }
 
+goToProducts() { 
+  this.router.navigate(['/products']);
+}
 
 ngOnInit(): void {
 
