@@ -8,10 +8,10 @@ import {
 import express from 'express';
 import { join } from 'node:path';
 
+import { serverRoutes } from './app/app.routes.server';
 
 export const serverConfig = {
-  routes: [
-    {path: 'product/:id', renderMode: 'server' }  ]
+  routes: serverRoutes 
 };
 
 const browserDistFolder = join(import.meta.dirname, '../browser');
