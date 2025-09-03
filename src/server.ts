@@ -1,3 +1,4 @@
+import { provideServerRendering } from '@angular/ssr';
 import {
   AngularNodeAppEngine,
   createNodeRequestHandler,
@@ -6,6 +7,12 @@ import {
 } from '@angular/ssr/node';
 import express from 'express';
 import { join } from 'node:path';
+
+
+export const serverConfig = {
+  routes: [
+    { path: 'product/:id', renderMode: 'server' }  ]
+};
 
 const browserDistFolder = join(import.meta.dirname, '../browser');
 
