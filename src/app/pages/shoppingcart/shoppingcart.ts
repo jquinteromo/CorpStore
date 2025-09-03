@@ -84,6 +84,11 @@ delecproduct(id:number){
   this.cartservice.setCar(updatedCart);
 }
 
+trackByProduct(index: number, product: Product): number {
+  return product.id;
+}
+
+
 ngOnInit(): void {
 
 

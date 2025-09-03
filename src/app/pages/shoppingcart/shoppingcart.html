@@ -10,7 +10,7 @@
    <div class="container_targets">
 
 <div class="container_products_target">
-         <div class="Product_add " *ngFor="let product of ProductsInCart">
+         <div class="Product_add " *ngFor="let product of ProductsInCart; trackBy: trackByProduct">
                 <img  class="img_product" [src]="product.images[0]" alt="monitor">
                  <div class="details_product">
 
